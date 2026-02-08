@@ -7,7 +7,7 @@ import {
   LuTrash2,
 } from "react-icons/lu";
 
-const TransactionInfoCard = ({ title, icon, date, amount, type, hideDeleteBtn}) => {
+const TransactionInfoCard = ({ title, icon, date, amount, type, hideDeleteBtn ,onDelete}) => {
   
   // 1. RESOLVE THE ICON: 
   // If 'icon' is a string like "LuPizza", we look it up in LucideIcons.
