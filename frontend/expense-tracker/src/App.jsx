@@ -48,14 +48,14 @@ function App() {
 
 export default App;
 
-const Root =()=>{
-  //check is token is authenticated, otherwise to login
-  return isAuthenticated = !localStorage.getItem("token");
+const Root = () => {
+  // check if token exists
+  const isAuthenticated = !!localStorage.getItem("token");
 
-  //Redirect to dahsboard if authenticated, otherwise to login
-  return isAuthenticated ?(
-    <Navigate to ="/dashboard"/>
-  ):(
-    <Navigate to ="/login"/>
-  )
-}
+  // Redirect based on auth
+  return isAuthenticated ? (
+    <Navigate to="/dashboard" />
+  ) : (
+    <Navigate to="/login" />
+  );
+};
